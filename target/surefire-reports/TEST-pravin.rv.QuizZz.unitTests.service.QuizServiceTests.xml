@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="pravin.rv.QuizZz.unitTests.service.QuizServiceTests" time="0.014" tests="19" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.vm.version" value="11.0.11+9"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/lib"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/pravinindalchavhan/Downloads/quiz-test"/>
+    <property name="java.vm.vendor" value="AdoptOpenJDK"/>
+    <property name="java.vendor.url" value="https://adoptopenjdk.net/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="user.country" value="MY"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/pravinindalchavhan/Downloads/quiz-test"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="11.0.11+9"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/5d/k5vhtrm57211bsbnh25mykmh0000gn/T/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/Users/pravinindalchavhan/.m2/wrapper/dists/apache-maven-3.5.0-bin/6ps54u5pnnbbpr6ds9rppcc7iv/apache-maven-3.5.0/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/pravinindalchavhan/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="maven.conf" value="/Users/pravinindalchavhan/.m2/wrapper/dists/apache-maven-3.5.0-bin/6ps54u5pnnbbpr6ds9rppcc7iv/apache-maven-3.5.0/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="55.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.15.7"/>
+    <property name="library.jansi.path" value="/Users/pravinindalchavhan/.m2/wrapper/dists/apache-maven-3.5.0-bin/6ps54u5pnnbbpr6ds9rppcc7iv/apache-maven-3.5.0/lib/jansi-native/osx64"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.home" value="/Users/pravinindalchavhan"/>
+    <property name="user.timezone" value="Asia/Kuala_Lumpur"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="user.name" value="pravinindalchavhan"/>
+    <property name="java.class.path" value="/Users/pravinindalchavhan/Downloads/quiz-test/.mvn/wrapper/maven-wrapper.jar"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.apache.maven.wrapper.MavenWrapperMain install -f /Users/pravinindalchavhan/Downloads/quiz-test/pom.xml"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="11.0.11"/>
+    <property name="java.vendor" value="AdoptOpenJDK"/>
+    <property name="maven.home" value="/Users/pravinindalchavhan/.m2/wrapper/dists/apache-maven-3.5.0-bin/6ps54u5pnnbbpr6ds9rppcc7iv/apache-maven-3.5.0"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.version.date" value="2021-04-20"/>
+    <property name="java.vendor.url.bug" value="https://github.com/AdoptOpenJDK/openjdk-support/issues"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="java.vendor.version" value="AdoptOpenJDK-11.0.11+9"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase name="findAllQuizzesWithContent" classname="pravin.rv.QuizZz.unitTests.service.QuizServiceTests" time="0.005"/>
+  <testcase name="findAllQuizzesEmpty" classname="pravin.rv.QuizZz.unitTests.service.QuizServiceTests" time="0.001"/>
+  <testcase name="testFindWithStringEmptyRepo" classname="pravin.rv.QuizZz.unitTests.service.QuizServiceTests" time="0"/>
+  <testcase name="testCheckAnswers_withInvalidQuestions_shouldIgnoreThem" classname="pravin.rv.QuizZz.unitTests.service.QuizServiceTests" time="0.001"/>
+  <testcase name="testCheckAnswers_questionIsNotAnswered_shouldThrowException" classname="pravin.rv.QuizZz.unitTests.service.QuizServiceTests" time="0"/>
+  <testcase name="testSaveQuiz" classname="pravin.rv.QuizZz.unitTests.service.QuizServiceTests" time="0.001"/>
+  <testcase name="testFindByUser" classname="pravin.rv.QuizZz.unitTests.service.QuizServiceTests" time="0"/>
+  <testcase name="testDeleteShouldDelete" classname="pravin.rv.QuizZz.unitTests.service.QuizServiceTests" time="0"/>
+  <testcase name="testDeleteFromWrongUser" classname="pravin.rv.QuizZz.unitTests.service.QuizServiceTests" time="0.001"/>
+  <testcase name="testUpdateFromWrongUser" classname="pravin.rv.QuizZz.unitTests.service.QuizServiceTests" time="0"/>
+  <testcase name="testFindWithString" classname="pravin.rv.QuizZz.unitTests.service.QuizServiceTests" time="0"/>
+  <testcase name="testFindWithEmptyString" classname="pravin.rv.QuizZz.unitTests.service.QuizServiceTests" time="0.001"/>
+  <testcase name="testPublishQuiz_withNoValidQuestions_shouldThrowException" classname="pravin.rv.QuizZz.unitTests.service.QuizServiceTests" time="0"/>
+  <testcase name="testCheckAnswers" classname="pravin.rv.QuizZz.unitTests.service.QuizServiceTests" time="0.001"/>
+  <testcase name="testUpdateShouldUpdate" classname="pravin.rv.QuizZz.unitTests.service.QuizServiceTests" time="0"/>
+  <testcase name="findExistingQuiz" classname="pravin.rv.QuizZz.unitTests.service.QuizServiceTests" time="0.001"/>
+  <testcase name="testUpdateUnexistentQuiz" classname="pravin.rv.QuizZz.unitTests.service.QuizServiceTests" time="0.002"/>
+  <testcase name="findNonExistingQuiz" classname="pravin.rv.QuizZz.unitTests.service.QuizServiceTests" time="0"/>
+  <testcase name="testPublishQuiz_withOneValidQuestion_shouldPublish" classname="pravin.rv.QuizZz.unitTests.service.QuizServiceTests" time="0"/>
+</testsuite>

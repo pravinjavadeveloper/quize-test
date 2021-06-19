@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: pravin.rv.QuizZz.unitTests.service.usermanagement.TokenServiceMailRegistrationTests
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec - in pravin.rv.QuizZz.unitTests.service.usermanagement.TokenServiceMailRegistrationTests
