@@ -14,7 +14,7 @@ import pravin.rv.quizzz.model.support.Result;
 
 public interface QuizService {
 	Quiz save(Quiz quiz, User user);
-
+	
 	Page<Quiz> findAll(Pageable pageable);
 
 	Page<Quiz> findAllPublished(Pageable pageable);

@@ -1,5 +1,7 @@
 package pravin.rv.quizzz.controller.rest.v1;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -23,12 +25,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 import pravin.rv.quizzz.controller.utils.RestVerifier;
 import pravin.rv.quizzz.model.AuthenticatedUser;
+import pravin.rv.quizzz.model.CompletedTest;
 import pravin.rv.quizzz.model.Question;
 import pravin.rv.quizzz.model.Quiz;
+import pravin.rv.quizzz.model.User;
 import pravin.rv.quizzz.model.support.Response;
 import pravin.rv.quizzz.model.support.Result;
 import pravin.rv.quizzz.service.QuestionService;
 import pravin.rv.quizzz.service.QuizService;
+import pravin.rv.quizzz.service.TestCompltService;
+import pravin.rv.quizzz.service.UserServiceImpl;
+
 
 @RestController
 @RequestMapping(QuizController.ROOT_MAPPING)
@@ -43,6 +50,13 @@ public class QuizController {
 
 	@Autowired
 	private QuestionService questionService;
+
+	@Autowired
+	private TestCompltService testCompltService;
+
+	@Autowired
+	private UserServiceImpl userServiceImpl;
+
 
 	@RequestMapping(value = "", method = RequestMethod.GET)
 	@PreAuthorize("permitAll")
@@ -135,6 +149,31 @@ public class QuizController {
 	public Result playQuiz(@PathVariable long quiz_id, @RequestBody List<Response> answersBundle) {
 		Quiz quiz = quizService.find(quiz_id);
 		return quizService.checkAnswers(quiz, answersBundle);
+	}
+
+	@RequestMapping(value = "/{quiz_id}/{correct_quest}/{total_quest}/submitTest", method = RequestMethod.POST)
+	@PreAuthorize("isAuthenticated()")
+	@ResponseStatus(HttpStatus.OK)
+	public String save(@Valid CompletedTest completedTest,@PathVariable Integer quiz_id,@PathVariable Integer correct_quest,@PathVariable Integer total_quest) {
+		System.out.println("*****#######"+quiz_id);
+		
+		User user = userServiceImpl.find((long) 3);
+		completedTest.setTotalQuest(total_quest);
+		completedTest.setCorrectQuest(correct_quest);
+		completedTest.setQuizId(quiz_id);
+		completedTest.setIsDone(true);
+		completedTest.setUserId(3);
+		completedTest.setCreatedBy(user.getUsername());
+		completedTest.setCreatedDate(new Date()); 
+		System.out.println("Pravin"+completedTest.toString());
+		//RestVerifier.verifyModelResult(result);
+
+		//Quiz quiz = quizService.find(quiz_id); 
+		//question.setQuiz(quiz);
+
+		testCompltService.save(completedTest);
+		//"redirect:/editQuiz/" + newQuiz.getId();
+		return "redirect:http://localhost:8080";
 	}
 
 }

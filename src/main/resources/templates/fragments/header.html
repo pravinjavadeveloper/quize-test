@@ -21,8 +21,8 @@
 						</ul>
 					</div>
 
-					<div sec:authorize="!isAuthenticated()">
-						<ul class="nav navbar-nav navbar-right">
+					<div sec:authorize="isAuthenticated()">
+						<ul sec:authentication="name" class="nav navbar-nav navbar-right">
 				         	<li><a href="/user/login">test</a></li>
 							<li><a href="/user/registration">hii</a></li>
 				        </ul>

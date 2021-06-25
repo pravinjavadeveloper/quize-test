@@ -65,6 +65,23 @@
 				$scope.setQuestion($scope.questionCount);
 			}	
 		}
+
+		$scope.answerQuestionSave = function(selection,selection1) {
+			//alert("selection:"+selection);
+			//alert("selection1:"+selection1);
+						
+			$http.post("/api/quizzes/" +$scope.quizId+"/"+selection+"/"+selection1+ "/submitTest")
+			.then(
+				function(response) {
+				//	questions = questions.concat(response.data);
+				//	$scope.totalQuestions = questions.length;
+				//	$scope.setQuestion($scope.questionCount);
+				}, 
+				function(reason) {
+					$scope.error = "Could not fetch the data.";
+				}
+			);	
+		}
 		
 		$scope.submitAnswers = function() {
 			$http.post("/api/quizzes/" + $scope.quizId + "/submitAnswers",

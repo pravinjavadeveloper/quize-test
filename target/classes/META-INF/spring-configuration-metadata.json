@@ -1,0 +1,11 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "pravin.rv.quizzz.config.MailConfig",
+      "name": "application.properties",
+      "type": "pravin.rv.quizzz.config.MailConfig"
+    }
+  ],
+  "properties": []
+}

@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-QuizZzApplication<Quiz>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "pravin.rv.quizzz.QuizZzApplication",
+            "projectName": "Quiz",
+            "args": ""
+        }
+    ]
+}
