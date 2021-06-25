@@ -1,0 +1,33 @@
+# This workflow will build a Java project with Maven
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
+name: CI-CD-Pipeline-AWS
+
+env: 
+EB_PACKAGE_S3_BUCKET_NAME : "quiz-bucket"
+EB_APPLICATION_NAME       : "QuizTest"
+EB_ENVIRONMENT_NAME       : "QuizTest-env"
+DEPLOY_PACKAGE_NAME       : "quiz-test-${{github.sha}}.zip"
+AWS_REGION_NAME           : "US East (Ohio)us-east-2"
+
+  
+on:
+  push:
+    branches : 
+      -master
+
+jobs:
+      my_ci_pipeline:
+              permissions : 
+               runs-on: ubuntu-latest
+
+steps:
+     - name: git clone our repository 
+       uses: actions/checkout@v1      
+       
+     - name: create deployment zip package
+       run : zip -r ${{DEPLOY_PACKAGE_NAME}} ./ -x "*.git*"
+      
+
+    
+  
