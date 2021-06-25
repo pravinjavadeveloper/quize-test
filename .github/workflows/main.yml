@@ -20,7 +20,7 @@ jobs:
     my_ci_pipeline :
      runs-on : ubuntu-latest
 
-    steps: 
+     steps: 
          - name: git clone our repository 
            uses: actions/checkout@v1      
 
