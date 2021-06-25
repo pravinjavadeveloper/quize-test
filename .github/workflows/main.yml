@@ -11,36 +11,36 @@ env:
   AWS_REGION_NAME           : "us east (Ohio)us-east-2"
 
   
-on :
-  push :
-    branches : 
-      -master
+on:
+  push:
+    branches: 
+      -main
       
-                jobs :
-                  my_ci_pipeline :
-                  permissions : 
-                  runs-on : ubuntu-latest
+jobs:
+    my_ci_pipeline :
+     runs-on : ubuntu-latest
 
-steps :
-     - name: git clone our repository 
-       uses: actions/checkout@v1      
-       
-     - name: create deployment zip package
-       run : zip -r ${{ DEPLOY_PACKAGE_NAME }} ./ -x "*.git*" 
-       
-     - name : Configure AWS Credentials 
-       uses : aws-actions/configure-aws-credentials@v1
-       with : 
-       aws-access-key-id : ${{ secrets.MY_AWS_ACCESS_KEY }}
-       aws-secret-access-key : ${{ secrets.MY_AWS_SECRET_KEY }}
-       aws-region            : ${{ env.AWS_REGION_NAME }}
-       
-       
-       - name : copy our Deployment package to S3 bucket
-         run : aws s3 cp ${{ env.DEPLOY_PACKAGE_NAME }} s3://${{ env.EB_PACKAGE_S3_BUCKET_NAME }}/
-         
-       - name : printing message on completion of CI Pipeline
-         run : echo "CI Pipeline part finished Successfully"
+    steps: 
+         - name: git clone our repository 
+           uses: actions/checkout@v1      
+
+         - name: create deployment zip package
+           run: zip -r ${{ DEPLOY_PACKAGE_NAME }} ./ -x "*.git*" 
+
+         - name: Configure AWS Credentials 
+           uses: aws-actions/configure-aws-credentials@v1
+           with: 
+              aws-access-key-id : ${{ secrets.MY_AWS_ACCESS_KEY }}
+              aws-secret-access-key : ${{ secrets.MY_AWS_SECRET_KEY }}
+              aws-region            : ${{ env.AWS_REGION_NAME }}    
+              
+         - name: copy our Deployment package to S3 bucket
+     
+           run: aws s3 cp ${{ env.DEPLOY_PACKAGE_NAME }} s3://${{ env.EB_PACKAGE_S3_BUCKET_NAME }}/
+      
+         - name: printing message on completion of CI Pipeline
+
+           run: echo "CI Pipeline part finished Successfully"  
        
       
 
