@@ -40,7 +40,7 @@ jobs:
       
          - name: printing message on completion of CI Pipeline
 
-           run: echo "CI Pipeline part finished Successfully"  
+           run: echo "CI Pipeline part finished Successfully."  
        
       
 
