@@ -64,6 +64,6 @@
     <property name="sun.cpu.isalist" value=""/>
   </properties>
   <testcase name="sendEmailRegistrationToken" classname="pravin.rv.QuizZz.unitTests.service.usermanagement.TokenDeliverySystemEmailTests" time="0.008"/>
-  <testcase name="failToSendEmailRegistrationToken_shouldNotThrowException" classname="pravin.rv.QuizZz.unitTests.service.usermanagement.TokenDeliverySystemEmailTests" time="0.002"/>
+  <!-- <testcase name="failToSendEmailRegistrationToken_shouldNotThrowException" classname="pravin.rv.QuizZz.unitTests.service.usermanagement.TokenDeliverySystemEmailTests" time="0.002"/> -->
   <testcase name="sendForgotPasswordToken" classname="pravin.rv.QuizZz.unitTests.service.usermanagement.TokenDeliverySystemEmailTests" time="0.001"/>
 </testsuite>
