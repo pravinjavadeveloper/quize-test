@@ -6,7 +6,7 @@
 	<groupId>pravin.rv</groupId>
 	<artifactId>Quiz</artifactId>
 	<version>0.0.3-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 
 	<name>QuizZz</name>
 	<description>Quiz web app using Spring Boot</description>
@@ -127,7 +127,7 @@
 
 	<build>
 
-		<finalName>${project.artifactId}</finalName>
+		<finalName>Quiz</finalName>
 		<plugins>
 			 <plugin>
 			<groupId>org.apache.maven.plugins</groupId>
@@ -140,7 +140,7 @@
 			</configuration>
  		</plugin>
 		</plugins>
-
+		
 
 	</build>
 
