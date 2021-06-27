@@ -8,7 +8,6 @@ pravin/rv/QuizZz/unitTests/service/QuestionServiceTests$4.class
 pravin/rv/QuizZz/unitTests/service/usermanagement/TokenServiceForgotPasswordTests$1.class
 pravin/rv/QuizZz/unitTests/service/QuestionServiceTests$2.class
 pravin/rv/QuizZz/unitTests/service/accesscontrol/aspects/AccessControlAspectsAnswerTests.class
-pravin/rv/QuizZz/integration/LifeCycleTest.class
 pravin/rv/QuizZz/unitTests/service/usermanagement/UserManagementServiceTests.class
 pravin/rv/QuizZz/integration/utils/MailHelper.class
 pravin/rv/QuizZz/unitTests/service/usermanagement/TokenDeliverySystemEmailTests.class
