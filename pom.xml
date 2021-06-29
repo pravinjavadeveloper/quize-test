@@ -6,9 +6,8 @@
 	<groupId>pravin.rv</groupId>
 	<artifactId>Quiz</artifactId>
 	<version>0.0.3-SNAPSHOT</version>
-	
-
-	<name>QuizZz</name>
+	<packaging>war</packaging>
+	<name>Quiz</name>
 	<description>Quiz web app using Spring Boot</description>
 
 	<parent>
@@ -19,8 +18,6 @@
 	</parent>
 
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 	</properties>
 
@@ -127,7 +124,37 @@
 
 	</dependencies>
 
-	<build>
+		<build>
+				<plugins>
+
+					<plugin><!-- don't pack the war  -->
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-war-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>default-war</id>
+								<phase>none</phase>
+							</execution>
+							<execution>
+								<id>war-quiz</id>
+								<configuration>
+									<webappDirectory>target/deploy</webappDirectory>
+									<archiveClasses>true</archiveClasses>
+								</configuration>
+								<phase>prepare-package</phase>
+								<goals>
+									<goal>quiz</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.springframework.boot</groupId>
+						<artifactId>spring-boot-maven-plugin</artifactId>
+					</plugin>
+				</plugins>
+			</build>
+	<!-- <build>
 		<finalName>${project.artifactId}</finalName>
 		<plugins>
 			 <plugin>
@@ -141,7 +168,7 @@
 			</configuration>
  		</plugin>
 		</plugins>
-	</build>
+	</build> -->
 
 
 </project>

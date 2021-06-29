@@ -1,14 +1,16 @@
 version: 0.2
-
 phases:
+  pre-build:
+    commands:
+    - echo "Entered the pre-build phase"
   build:
     commands:
-      - echo Entered the build phase...
-      - mvn clean package
-  post_build:
+    - echo "Entered build phase"
+    - mvn clean prepare-package war:quiz
+  post-build:
     commands:
-      - echo Build completed successfully
+    - echo "Entered the post-build phase"
+    - mv target/deploy ./
 artifacts:
   files:
-    - target/Quiz.jar
-  discard-paths: yes
+    - deploy/**/*
