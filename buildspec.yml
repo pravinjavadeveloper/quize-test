@@ -11,4 +11,5 @@ phases:
 artifacts:
   files:
     - target/Quiz.jar
+    - appspec.yml
   discard-paths: yes
