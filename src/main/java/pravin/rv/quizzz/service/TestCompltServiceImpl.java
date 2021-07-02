@@ -10,7 +10,7 @@ import pravin.rv.quizzz.model.CompletedTest;
 import pravin.rv.quizzz.repository.TestCompltRepository;
 
 
-@Service("TestCompltService")
+@Service
 @Transactional
 public class TestCompltServiceImpl implements TestCompltService{
 	
