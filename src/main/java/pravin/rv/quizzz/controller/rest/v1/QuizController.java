@@ -170,7 +170,7 @@ public class QuizController {
 
 		testCompltService.save(completedTest);
 		//"redirect:/editQuiz/" + newQuiz.getId();
-		return "redirect:http://localhost:8080";
+		return "redirect:https://aws-quiz.com/";
 	}
 
 }

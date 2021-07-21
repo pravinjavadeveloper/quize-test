@@ -44,8 +44,8 @@ public class AnswerServiceTests {
 		answerRepository = mock(AnswerRepository.class);
 		questionService = mock(QuestionService.class);
 
-		service = new AnswerServiceImpl(answerRepository);
-		service.setQuestionService(questionService);
+		//service = new AnswerServiceImpl(answerRepository);
+		//service.setQuestionService(questionService);
 
 		internalUser.setId(1l);
 		quiz.setCreatedBy(user.getUser());

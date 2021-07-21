@@ -16,7 +16,7 @@ public class MailHelper {
 	public static String extractUrlFromMail(Message message) throws IOException, MessagingException {
 		String body = (String) message.getContent();
 
-		Pattern pattern = Pattern.compile(".*http://localhost:8080(.*)((\r\n)|(\n)).*");
+		Pattern pattern = Pattern.compile(".*https://aws-quiz.com(.*)((\r\n)|(\n)).*");
 		Matcher matcher = pattern.matcher(body);
 
 		if (matcher.find()) {
