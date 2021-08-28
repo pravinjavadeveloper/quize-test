@@ -29,7 +29,7 @@ public class TokenDeliverySystemEmail implements TokenDeliverySystem {
     private static final String BASE_CONFIG_URI = "quizzz.tokens.%s";
 
     private MessageSource messageSource;
-    private JavaMailSender mailSender;
+    //private JavaMailSender mailSender;
 
 
 

@@ -20,8 +20,6 @@ public class WebUserController {
 	@PreAuthorize("permitAll")
 	public String getQuizzesForUser(@PathVariable Long user_id) {
 		userService.find(user_id);
-
-		// TODO: Unimplemented
 		return "error";
 	}
 
