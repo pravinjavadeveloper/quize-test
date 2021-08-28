@@ -31,7 +31,6 @@ import pravin.rv.quizzz.model.User;
 import pravin.rv.quizzz.repository.QuestionRepository;
 import pravin.rv.quizzz.service.AnswerService;
 import pravin.rv.quizzz.service.QuestionService;
-import pravin.rv.quizzz.service.QuestionServiceImpl;
 
 public class QuestionServiceTests {
 

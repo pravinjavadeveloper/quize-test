@@ -45,10 +45,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	/*
-	 * Look up by both Email and Username. Throw exception if it wasn't in
-	 * either. TODO: Join Username and Email into one JPQL
-	 */
+	
 	public AuthenticatedUser loadUserByUsername(String username) throws UsernameNotFoundException {
 		User user;
 

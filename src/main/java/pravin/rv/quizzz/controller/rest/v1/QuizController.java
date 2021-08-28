@@ -162,11 +162,11 @@ public class QuizController {
 		completedTest.setUserId(3);
 		completedTest.setCreatedBy(user.getUsername());
 		completedTest.setCreatedDate(new Date()); 
-		System.out.println("Pravin"+completedTest.toString());
+		System.out.println("Pravin::"+completedTest.toString());
 		//RestVerifier.verifyModelResult(result);
-
+//
 		//Quiz quiz = quizService.find(quiz_id); 
-		//question.setQuiz(quiz);
+		//question.setQuiz(quiz);    
 
 		testCompltService.save(completedTest);
 		//"redirect:/editQuiz/" + newQuiz.getId();
